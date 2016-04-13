@@ -20,7 +20,7 @@ for row in table.findAll('tr')[1:]:
             list_of_cells.append("http://www.tdcj.state.tx.us/death_row/dr_" + cell.find('a')['href'])
     list_of_rows.append(list_of_cells)
 
-outfile = open("./executions.csv", "wb")
+outfile = open("./executions2.csv", "wb")
 writer = csv.writer(outfile)
 writer.writerow(['scheduled_execution', 'offender_info', 'url', 'last_name', 'first_name', 'tdcj_number', 'DOB', 'race', 'date_received', 'county'])
 writer.writerows(list_of_rows)
